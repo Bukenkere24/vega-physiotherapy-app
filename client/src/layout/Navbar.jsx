@@ -65,7 +65,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
                 WhatsApp
               </a>
               <Link to="/book" className="btn btn-primary btn-sm">
-                Book &amp; Pay
+                Book
               </Link>
             </div>
 
@@ -94,7 +94,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
           </NavLink>
         ))}
         <Link to="/book" className="btn btn-primary" style={{ marginTop: 12 }} onClick={() => setMenuOpen(false)}>
-          Book &amp; Pay
+          Book
         </Link>
       </div>
     </>

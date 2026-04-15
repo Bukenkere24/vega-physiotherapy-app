@@ -6,10 +6,18 @@ function createTransport() {
   const pass = process.env.SMTP_PASS;
   if (!host || !user || !pass) return null;
 
+  const port = Number(process.env.SMTP_PORT || 587);
+  const secure = process.env.SMTP_SECURE
+    ? process.env.SMTP_SECURE === 'true'
+    : port === 465;
+
   return nodemailer.createTransport({
     host,
-    port: Number(process.env.SMTP_PORT || 587),
-    secure: false,
+    port,
+    secure,
+    connectionTimeout: 15000,
+    greetingTimeout: 15000,
+    socketTimeout: 30000,
     auth: { user, pass },
   });
 }
@@ -22,18 +30,26 @@ async function sendContactNotification(payload) {
   const transport = createTransport();
   if (!transport) return { sent: false, reason: 'smtp not configured' };
 
-  const subject = `[Vega Website] ${payload.source === 'academy' ? 'Academy enquiry' : 'Contact'} — ${payload.service_interest}`;
+  const subject = `[Vega Website] ${payload.source === 'academy' ? 'Academy enquiry' : 'Appointment request'} - ${payload.service_interest}`;
   const text = [
     `Name: ${payload.full_name}`,
     `Phone: ${payload.phone}`,
-    `Email: ${payload.email || '—'}`,
+    `Email: ${payload.email || '-'}`,
     `Service: ${payload.service_interest}`,
+    `Preferred date: ${payload.preferred_date || '-'}`,
+    `Preferred time: ${payload.preferred_time || '-'}`,
     `Source: ${payload.source}`,
     '',
     payload.message || '(no message)',
   ].join('\n');
 
-  await transport.sendMail({ from, to, subject, text });
+  await transport.sendMail({
+    from,
+    to,
+    replyTo: payload.email || undefined,
+    subject,
+    text,
+  });
   return { sent: true };
 }
 

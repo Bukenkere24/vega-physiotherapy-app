@@ -40,7 +40,7 @@ export default function Services() {
                     <div className="service-price-label">{s.priceLabel}</div>
                   </div>
                   <Link to="/book" className="service-link">
-                    Book &amp; pay →
+                    Book
                   </Link>
                 </div>
               </Reveal>

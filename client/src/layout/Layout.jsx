@@ -10,7 +10,6 @@ export default function Layout() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    setMenuOpen(false)
   }, [pathname])
 
   useEffect(() => {

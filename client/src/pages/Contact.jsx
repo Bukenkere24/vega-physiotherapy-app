@@ -96,6 +96,14 @@ export default function Contact() {
                   title="Vega Physiotherapy location"
                 />
               </div>
+              <a
+                className="btn btn-primary map-directions"
+                href={site.mapsDirectionsUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open in Google Maps
+              </a>
             </Reveal>
             <Reveal>
               <ContactForm />

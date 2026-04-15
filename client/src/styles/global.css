@@ -1130,6 +1130,12 @@ section {
   color: var(--dark);
 }
 
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1149,6 +1155,41 @@ section {
 .form-group textarea:focus {
   border-color: var(--teal);
   box-shadow: 0 0 0 3px rgba(2, 128, 144, 0.12);
+}
+
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.time-slot {
+  position: relative;
+  min-height: 44px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.time-slot input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.time-slot:hover,
+.time-slot.selected {
+  border-color: var(--teal);
+  background: rgba(2, 128, 144, 0.08);
+  color: var(--teal);
 }
 
 .form-submit {
@@ -1199,6 +1240,17 @@ section {
   color: var(--gray);
   margin-bottom: 20px;
   line-height: 1.7;
+}
+
+.booking-form {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.map-directions {
+  width: 100%;
+  justify-content: center;
+  margin-top: 14px;
 }
 
 .blog-list {
@@ -1325,16 +1377,24 @@ footer {
 .footer-social {
   width: 38px;
   height: 38px;
-  border-radius: 9px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 700;
   transition: var(--transition);
   color: #94a3b8;
+}
+
+.footer-social svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .footer-social:hover {
@@ -1546,6 +1606,9 @@ footer {
   }
   .form-row {
     grid-template-columns: 1fr;
+  }
+  .time-slot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .footer-grid {
     grid-template-columns: 1fr;

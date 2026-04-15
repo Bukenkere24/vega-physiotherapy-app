@@ -36,7 +36,7 @@ export default function Home() {
               </p>
               <div className="hero-btns">
                 <Link to="/book" className="btn btn-primary">
-                  Book &amp; Pay (Assessment)
+                  Book Assessment
                 </Link>
                 <Link to="/academy" className="btn btn-outline">
                   Academy Program

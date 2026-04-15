@@ -19,6 +19,8 @@ export const site = {
   instagram: 'https://instagram.com/vegaphysiotherapy',
   mapsEmbedSrc:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d77.5490!3d12.9082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzI5LjUiTiA3N8KwMzInNTYuNCJF!5e0!3m2!1sen!2sin!4v1000000000000',
+  mapsDirectionsUrl:
+    'https://www.google.com/maps/dir/?api=1&destination=12.9082%2C77.5490&travelmode=driving',
   hours: [
     'Monday – Saturday: 8:00 AM – 8:00 PM',
     'Sunday: By appointment only',
@@ -26,7 +28,6 @@ export const site = {
   phoneDisplay: import.meta.env.VITE_PHONE_DISPLAY || '+91 XXXXX XXXXX',
   phoneE164: import.meta.env.VITE_PHONE_E164 || '91XXXXXXXXXX',
   whatsappE164: import.meta.env.VITE_WHATSAPP_E164 || import.meta.env.VITE_PHONE_E164 || '91XXXXXXXXXX',
-  bookingAmountPaise: Number(import.meta.env.VITE_BOOKING_AMOUNT_PAISE || 70000),
   partnerLine: import.meta.env.VITE_PARTNER_LINE || '',
   gaId: import.meta.env.VITE_GA_MEASUREMENT_ID || '',
 };

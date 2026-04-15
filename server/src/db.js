@@ -27,29 +27,23 @@ function initDb() {
       phone TEXT NOT NULL,
       email TEXT,
       service_interest TEXT NOT NULL,
+      preferred_date TEXT,
+      preferred_time TEXT,
       message TEXT,
       source TEXT NOT NULL DEFAULT 'contact',
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
-    CREATE TABLE IF NOT EXISTS payments (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      razorpay_order_id TEXT UNIQUE NOT NULL,
-      amount_paise INTEGER NOT NULL,
-      currency TEXT NOT NULL DEFAULT 'INR',
-      status TEXT NOT NULL DEFAULT 'created',
-      contact_name TEXT,
-      contact_phone TEXT,
-      contact_email TEXT,
-      service_note TEXT,
-      razorpay_payment_id TEXT,
-      razorpay_signature TEXT,
-      created_at TEXT NOT NULL DEFAULT (datetime('now'))
-    );
-
     CREATE INDEX IF NOT EXISTS idx_contact_created ON contact_submissions(created_at);
-    CREATE INDEX IF NOT EXISTS idx_payments_order ON payments(razorpay_order_id);
   `);
+
+  const columns = db.prepare(`PRAGMA table_info(contact_submissions)`).all().map((col) => col.name);
+  if (!columns.includes('preferred_date')) {
+    db.exec(`ALTER TABLE contact_submissions ADD COLUMN preferred_date TEXT`);
+  }
+  if (!columns.includes('preferred_time')) {
+    db.exec(`ALTER TABLE contact_submissions ADD COLUMN preferred_time TEXT`);
+  }
 
   return db;
 }
