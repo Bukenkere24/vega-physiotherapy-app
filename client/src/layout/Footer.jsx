@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="footer-brand-name">{site.name}</div>
             <div className="footer-brand-tag">Rehabilitation &amp; Performance Center · Banashankari, Bangalore</div>
             <div className="footer-brand-desc">
-              Evidence-based sports rehabilitation and ACSM performance testing — onsite academy testing across Bangalore.
+              Evidence-based Physiotherapy  and ACSM performance testing — onsite academy testing across Bangalore.
             </div>
             <div className="footer-socials">
               <a href={site.instagram} className="footer-social" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram">

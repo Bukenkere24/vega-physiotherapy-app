@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Vega Physiotherapy | Evidence-Based Sports Rehabilitation · Bangalore</title>
+        <title>Vega Physiotherapy | Evidence-Based Physiotherapy · Bangalore</title>
         <meta
           name="description"
           content="MPT Sports Science specialists delivering ACSM-validated performance testing and sports rehabilitation in Banashankari, Bangalore."
@@ -29,7 +29,7 @@ export default function Home() {
               <h1 className="hero-h1">
                 Evidence-Based
                 <br />
-                <span className="teal underline-accent">Sports Rehabilitation</span>
+                <span className="teal underline-accent">Physiotherapy</span>
               </h1>
               <p className="hero-sub">
                 MPT Sports Science specialists delivering ACSM-validated performance testing and data-driven rehabilitation for athletes, sports academies and IT professionals.
@@ -78,28 +78,28 @@ export default function Home() {
                   <div className="hero-progress-item">
                     <label>
                       <span>Strength Recovery</span>
-                      <span>82%</span>
+                      <span>89%</span>
                     </label>
                     <div className="progress-bar">
-                      <div className="progress-fill" style={{ width: '82%' }} />
+                      <div className="progress-fill" style={{ width: '89%' }} />
                     </div>
                   </div>
                   <div className="hero-progress-item">
                     <label>
                       <span>Mobility Index</span>
-                      <span>75%</span>
+                      <span>95%</span>
                     </label>
                     <div className="progress-bar">
-                      <div className="progress-fill" style={{ width: '75%' }} />
+                      <div className="progress-fill" style={{ width: '95%' }} />
                     </div>
                   </div>
                   <div className="hero-progress-item">
                     <label>
                       <span>Performance Score</span>
-                      <span>91%</span>
+                      <span>98%</span>
                     </label>
                     <div className="progress-bar">
-                      <div className="progress-fill" style={{ width: '91%' }} />
+                      <div className="progress-fill" style={{ width: '98%' }} />
                     </div>
                   </div>
                 </div>
@@ -126,6 +126,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* //here i need the reviews dynamically */}
+      
+
 
       <section id="why">
         <div className="container">

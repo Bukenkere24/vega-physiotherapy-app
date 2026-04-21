@@ -32,8 +32,8 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
                 className="nav-logo-img"
                 src="/logo.png"
                 alt="Vega Physiotherapy logo"
-                width={44}
-                height={44}
+                width={65}
+                height={65}
                 style={{ display: logoIcon ? 'none' : 'block' }}
                 onLoad={() => setLogoIcon(false)}
                 onError={(e) => {

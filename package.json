@@ -2,12 +2,12 @@
   "name": "vega-physiotherapy-app",
   "private": true,
   "version": "1.0.0",
-  "description": "Vega Physiotherapy — React frontend + Express API (production-ready)",
+  "description": "Vega Physiotherapy \u2014 React frontend + Express API (production-ready)",
   "scripts": {
-    "dev": "concurrently -n client,server -c cyan,magenta \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
-    "build": "npm run build --prefix client",
-    "start": "npm run start --prefix server",
-    "postbuild": "echo Build output is in client/dist — start server with npm start"
+    "dev": "node init && concurrently -n client,server -c cyan,magenta \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "build": "node init && npm run build --prefix client",
+    "start": "node init && npm run start --prefix server",
+    "postbuild": "echo Build output is in client/dist \u2014 start server with npm start"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

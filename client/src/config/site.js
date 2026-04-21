@@ -18,9 +18,9 @@ export const site = {
   email: 'info@vegaphysiotherapy.in',
   instagram: 'https://instagram.com/vegaphysiotherapy',
   mapsEmbedSrc:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d77.5490!3d12.9082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzI5LjUiTiA3N8KwMzInNTYuNCJF!5e0!3m2!1sen!2sin!4v1000000000000',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.5195311316013!2d77.52747538359507!3d12.905209799763146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f26bdd9387b%3A0x348e0053d9b3577b!2sVega%20Physiotherapy%20and%20Rehabilitation%20Center!5e0!3m2!1sen!2sin!4v1776770922734!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade',
   mapsDirectionsUrl:
-    'https://www.google.com/maps/dir/?api=1&destination=12.9082%2C77.5490&travelmode=driving',
+    'https://maps.app.goo.gl/59iK4hmmfQFnbB946',
   hours: [
     'Monday – Saturday: 8:00 AM – 8:00 PM',
     'Sunday: By appointment only',
