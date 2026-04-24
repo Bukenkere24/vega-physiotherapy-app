@@ -1,0 +1,174 @@
+
+/* ───────────────────────────────────────────
+   REVIEWS SECTION
+─────────────────────────────────────────── */
+.reviews-section {
+  background: linear-gradient(160deg, #f0fdfa 0%, #f8fafc 60%, #f0fdfa 100%);
+  padding: 90px 0 70px;
+  overflow: hidden;
+}
+
+/* Trust badge link */
+.rev-trust-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dark);
+  transition: var(--transition);
+  box-shadow: 0 2px 12px rgba(2, 128, 144, 0.08);
+  text-decoration: none;
+}
+.rev-trust-link:hover {
+  border-color: var(--teal);
+  box-shadow: 0 4px 20px rgba(2, 128, 144, 0.18);
+  transform: translateY(-1px);
+  color: var(--teal);
+}
+.rev-trust-stars {
+  color: #f59e0b;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.rev-trust-text {
+  color: inherit;
+}
+
+/* Swiper container */
+.rev-swiper {
+  overflow: visible !important;
+  padding-bottom: 4px !important;
+}
+
+/* Individual card */
+.rev-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  box-shadow: 0 4px 24px rgba(2, 128, 144, 0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%;
+  min-height: 240px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.rev-card:hover {
+  box-shadow: 0 10px 40px rgba(2, 128, 144, 0.14);
+  transform: translateY(-3px);
+}
+
+.rev-card-top {
+  flex: 1;
+}
+
+/* Stars */
+.rev-stars {
+  display: flex;
+  gap: 3px;
+  color: #f59e0b;
+  margin-bottom: 14px;
+}
+
+/* Review text */
+.rev-text {
+  font-size: 0.93rem;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+/* Reviewer row */
+.rev-card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+/* Avatar initial */
+.rev-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--mint));
+  color: var(--white);
+  font-family: 'Lexend', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rev-name {
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+.rev-source {
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-top: 2px;
+}
+
+/* Pagination + progress row */
+.rev-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.rev-pagination {
+  display: flex;
+  gap: 6px;
+}
+
+/* Override Swiper pagination bullet styles */
+.rev-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: var(--border);
+  border-radius: 100px;
+  opacity: 1;
+  transition: width var(--transition), background var(--transition);
+}
+.rev-pagination .swiper-pagination-bullet-active {
+  background: var(--teal);
+  width: 24px;
+}
+
+/* Autoplay progress bar */
+.rev-progress-wrap {
+  width: 80px;
+  height: 3px;
+  background: var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.rev-progress-bar {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--teal), var(--mint));
+  width: calc(var(--progress, 0) * 100%);
+  transition: width 0.1s linear;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .rev-card {
+    min-height: 220px;
+    padding: 22px 20px 18px;
+  }
+}

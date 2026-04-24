@@ -1,0 +1,45 @@
+client/src/components/ReviewCarousel.jsx — Swiper-based carousel pulling from reviews.js
+client/src/styles/reviews.css — scoped styles matching your teal/Lexend/Manrope design system
+
+
+
+
+MOdified files 
+client/src/pages/Home.jsx — replaced the {/* //here i need the reviews dynamically */} comment with <ReviewCarousel />
+client/src/main.jsx — added import './styles/reviews.css'
+client/package.json — added "swiper": "^11.2.6"
+
+Features delivered 
+Features delivered:
+
+Autoplay (5s, pauses on hover) + smooth CSS transitions
+Swiper pagination with animated active pill
+Autoplay progress bar
+1 slide on mobile, 2 on desktop (≥768px breakpoint)
+Cards: rounded corners, shadow, teal-gradient avatar initials, star row, name + "Verified Google Review"
+Trust badge: ⭐ 4.9 from 70+ reviews on Google — set GOOGLE_REVIEWS_URL_HERE in ReviewCarousel.jsx line 5 to your real URL
+
+
+
+
+# 1. Install dependencies
+cd client && npm install        # adds swiper
+cd ../server && npm install     # swaps better-sqlite3 → pg
+
+# 2. Create your PostgreSQL database (local)
+psql -U postgres -c "CREATE DATABASE vega;"
+
+# 3. Create server/.env from the example
+cp server/.env.example server/.env
+# Then edit DATABASE_URL:
+DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/vega
+
+# 4. (Cloud hosts like Render/Railway/Supabase)
+# Set DATABASE_URL in their dashboard env vars panel.
+# Uncomment the ssl line in server/src/db.js if required:
+#   ssl: { rejectUnauthorized: false }
+
+# 5. Start
+npm run dev   # from repo root (if concurrently is set up), or:
+cd server && npm run dev
+cd client && npm run dev
